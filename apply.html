@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Us | Abhi Nov Studio</title>
+    <link rel="stylesheet" href="../Files Css/apply.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-brand">Abhi Nov Studio</div>
+        
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2c3e50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+
+        <div class="nav-menu-wrapper" id="navMenuWrapper">
+            <div class="nav-links">
+                <a href="homepage.html">Home</a>
+                <a href="apply.html" class="active">Join Us</a>
+                <a href="status.html">My Application</a>
+            </div>
+            <div class="nav-actions">
+                <span id="userGreeting">Loading...</span>
+                <button id="logoutBtn" class="btn-outline">Log Out</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-container">
+        <div class="header-section">
+            <h1>Career Application</h1>
+            <p>Ready to build the future of digital experiences? Fill out the form below to apply for a position at AbhiNov Studio.</p>
+        </div>
+
+        <div class="form-card">
+            <form id="applyForm">
+                
+                <div class="form-row">
+                    <div class="input-group">
+                        <label>Full Name</label>
+                        <input type="text" id="appFullName" required placeholder="John Doe">
+                    </div>
+                    <div class="input-group">
+                        <label>Age (Must be 15+)</label>
+                        <input type="number" id="appAge" required min="15" placeholder="18">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="input-group">
+                        <label>Discord ID (Required)</label>
+                        <input type="text" id="appDiscord" required placeholder="username#1234 or @username">
+                    </div>
+                    <div class="input-group">
+                        <label>Email Address</label>
+                        <input type="email" id="appEmail" required placeholder="name@domain.com">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="input-group">
+                        <label>Phone Number</label>
+                        <div class="phone-group">
+                            <select id="appCountryCode">
+                                <option value="+91">+91 (IN)</option>
+                                <option value="+1">+1 (US/CA)</option>
+                                <option value="+44">+44 (UK)</option>
+                                <option value="+61">+61 (AU)</option>
+                                <option value="+other">Other</option>
+                            </select>
+                            <input type="tel" id="appPhone" required placeholder="1234567890">
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label>Primary Language</label>
+                        <select id="appLang" required>
+                            <option value="English">English</option>
+                            <option value="Hindi">Hindi</option>
+                            <option value="Both">Both (Hindi & English)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="input-group" style="margin-bottom: 25px;">
+                    <label>Role / Position</label>
+                    <select id="appRole" required>
+                        <option value="" disabled selected>Select your specialization...</option>
+                        <option value="Game Developer">Game Developer</option>
+                        <option value="Web Developer">Web Developer</option>
+                        <option value="App Developer">App Developer</option>
+                        <option value="3D Modeler">3D Modeler</option>
+                        <option value="2D Modeler">2D Modeler</option>
+                        <option value="Sound Designer">Sound Designer</option>
+                        <option value="Sound Artist">Sound Artist</option>
+                        <option value="Designer (UI/UX)">Designer (UI/UX)</option>
+                        <option value="Multitasker / Other">Multitasker / Other</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-submit">Submit Application</button>
+                <a href="status.html" class="btn-view-status">Check Existing Application Status &rarr;</a>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="../java/apply.js"></script>
+</body>
+</html>

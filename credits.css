@@ -1,0 +1,112 @@
+/* Reset and Base Styles */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+body { background-color: #f4f6f8; color: #333; line-height: 1.6; padding-top: 70px; }
+
+/* Animations Class */
+.fade-on-scroll { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+.fade-on-scroll.appear { opacity: 1; transform: translateY(0); }
+
+/* =========================================
+   DESKTOP NAVBAR
+   ========================================= */
+.navbar { position: fixed; top: 0; width: 100%; background-color: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); padding: 15px 50px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); z-index: 1000; }
+.nav-brand { font-size: 20px; font-weight: 700; color: #2c3e50; white-space: nowrap; }
+
+/* Hidden on PC */
+.mobile-menu-btn { display: none; background: transparent; border: none; cursor: pointer; }
+
+/* PC Link Layout */
+.nav-menu-wrapper { display: flex; justify-content: space-between; align-items: center; width: 100%; margin-left: 40px; }
+.nav-links { display: flex; gap: 30px; flex-wrap: wrap; }
+.nav-links a { text-decoration: none; color: #555; font-weight: 600; font-size: 14px; transition: color 0.3s; }
+.nav-links a:hover, .nav-links a.active { color: #2980b9; }
+
+.nav-actions { display: flex; align-items: center; gap: 20px; white-space: nowrap; }
+#userGreeting { font-size: 14px; color: #555; font-weight: 500; }
+.btn-outline { padding: 8px 16px; border: 1px solid #2c3e50; background: transparent; color: #2c3e50; border-radius: 4px; cursor: pointer; font-weight: 600; transition: all 0.3s ease; }
+.btn-outline:hover { background: #2c3e50; color: #ffffff; }
+
+/* =========================================
+   CREDITS PAGE STYLES
+   ========================================= */
+.page-header { background-color: #1a252f; color: #ffffff; padding: 80px 20px; text-align: center; border-bottom: 4px solid #2980b9; }
+.page-header h1 { font-size: 2.8rem; margin-bottom: 10px; }
+.page-header p { color: #bdc3c7; font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+
+.credits-section { padding: 60px 20px; max-width: 1000px; margin: 0 auto; min-height: 60vh; }
+.credits-tier { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; margin-bottom: 40px; }
+.tier-divider { height: 1px; width: 60%; background: linear-gradient(90deg, transparent, #d1d8e0, transparent); margin: 0 auto 40px auto; }
+
+/* Credit Cards Horizontal Style (PC) */
+.credit-card { background: #ffffff; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; align-items: center; padding: 25px; width: 100%; max-width: 470px; transition: transform 0.3s ease, box-shadow 0.3s ease; border-left: 5px solid transparent; }
+.credit-card:hover { transform: translateX(5px); box-shadow: 0 10px 25px rgba(0,0,0,0.08); }
+
+.founder-card { border-left-color: #2c3e50; }
+.dev-card { border-left-color: #2980b9; }
+.support-card { border-left-color: #7f8c8d; }
+
+.avatar { width: 70px; height: 70px; background-color: #f0f2f5; color: #2c3e50; font-size: 22px; font-weight: 700; display: flex; justify-content: center; align-items: center; border-radius: 50%; flex-shrink: 0; margin-right: 25px; }
+.card-info { flex-grow: 1; }
+.card-info h3 { font-size: 1.3rem; color: #2c3e50; margin-bottom: 3px; }
+.card-info .role { font-size: 0.85rem; color: #2980b9; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; }
+.card-info .desc { font-size: 0.95rem; color: #555; line-height: 1.5; }
+
+footer { text-align: center; padding: 30px; background-color: #1a252f; color: #bdc3c7; font-size: 0.9rem; border-top: 1px solid #2c3e50; }
+
+/* =========================================
+   MOBILE & TABLET RESPONSIVE DESIGN
+   ========================================= */
+@media screen and (max-width: 1024px) {
+    .navbar { padding: 15px 20px; }
+    
+    /* Show Hamburger Menu */
+    .mobile-menu-btn { display: block; }
+
+    /* Hide Desktop Links and Form Mobile Menu */
+    .nav-menu-wrapper { 
+        display: none; 
+        flex-direction: column; 
+        position: absolute; 
+        top: 60px; 
+        left: 0; 
+        width: 100%; 
+        background-color: #ffffff; 
+        padding: 20px; 
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1); 
+        margin-left: 0; 
+        border-top: 1px solid #eee; 
+    }
+
+    /* Activated by JS */
+    .nav-menu-wrapper.active { display: flex; }
+
+    .nav-links { flex-direction: column; align-items: center; gap: 15px; }
+    .nav-actions { flex-direction: column; align-items: center; width: 100%; margin-top: 15px; }
+    .btn-outline { width: 100%; max-width: 250px; }
+
+    /* Fix Content Sizing for Mobile */
+    .page-header h1 { font-size: 2.2rem; }
+    .page-header p { font-size: 1rem; padding: 0 10px; }
+    .credits-section { padding: 40px 20px; }
+    .credits-tier { flex-direction: column; align-items: center; }
+    
+    /* Change Credit Card from Row to Column for Mobile */
+    .credit-card { 
+        flex-direction: column; 
+        text-align: center; 
+        padding: 30px 20px; 
+        /* Switch border from Left to Top for a centered card look */
+        border-left: none; 
+        border-top: 5px solid transparent; 
+    }
+    
+    .founder-card { border-top-color: #2c3e50; }
+    .dev-card { border-top-color: #2980b9; }
+    .support-card { border-top-color: #7f8c8d; }
+    
+    /* Center the Avatar */
+    .avatar { margin-right: 0; margin-bottom: 20px; width: 80px; height: 80px; font-size: 26px; }
+    .credit-card:hover { transform: translateY(-5px); } /* Changed hover animation */
+    
+    .tier-divider { width: 90%; }
+}

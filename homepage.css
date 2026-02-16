@@ -1,0 +1,101 @@
+/* Reset and Base Styles */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; scroll-behavior: smooth; }
+body { background-color: #f4f6f8; color: #333; line-height: 1.6; }
+
+/* Animations Class */
+.fade-on-scroll { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+.fade-on-scroll.appear { opacity: 1; transform: translateY(0); }
+
+/* =========================================
+   DESKTOP NAVBAR
+   ========================================= */
+.navbar { position: fixed; top: 0; width: 100%; background-color: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); padding: 15px 50px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); z-index: 1000; }
+.nav-brand { font-size: 20px; font-weight: 700; color: #2c3e50; white-space: nowrap; }
+
+/* Hidden on PC */
+.mobile-menu-btn { display: none; background: transparent; border: none; cursor: pointer; }
+
+/* PC Link Layout */
+.nav-menu-wrapper { display: flex; justify-content: space-between; align-items: center; width: 100%; margin-left: 40px; }
+.nav-links { display: flex; gap: 25px; flex-wrap: wrap; }
+.nav-links a { text-decoration: none; color: #555; font-weight: 600; font-size: 14px; transition: color 0.3s; }
+.nav-links a:hover, .nav-links a.active { color: #2980b9; }
+
+.nav-actions { display: flex; align-items: center; gap: 20px; white-space: nowrap; }
+#userGreeting { font-size: 14px; color: #555; font-weight: 500; }
+.btn-outline { padding: 8px 16px; border: 1px solid #2c3e50; background: transparent; color: #2c3e50; border-radius: 4px; cursor: pointer; font-weight: 600; transition: all 0.3s ease; }
+.btn-outline:hover { background: #2c3e50; color: #ffffff; }
+
+/* =========================================
+   PAGE SECTIONS (Hero, Services, Leadership)
+   ========================================= */
+.hero { height: 100vh; background: linear-gradient(135deg, #1a252f 0%, #2c3e50 100%); display: flex; justify-content: center; align-items: center; text-align: center; color: #ffffff; padding: 0 20px; }
+.hero-content h1 { font-size: 3.5rem; font-weight: 700; margin-bottom: 15px; letter-spacing: -0.5px; }
+.hero-content p { font-size: 1.2rem; color: #bdc3c7; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto; }
+.scroll-btn { display: inline-block; padding: 12px 28px; background-color: #ffffff; color: #2c3e50; text-decoration: none; border-radius: 6px; font-weight: 600; transition: transform 0.3s, box-shadow 0.3s; }
+.scroll-btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+
+section { padding: 100px 20px; max-width: 1100px; margin: 0 auto; }
+.section-header { text-align: center; margin-bottom: 60px; }
+.section-header h2 { font-size: 2.2rem; color: #2c3e50; margin-bottom: 10px; }
+.header-line { height: 4px; width: 60px; background-color: #2980b9; margin: 0 auto 15px auto; border-radius: 2px; }
+.section-subtitle { color: #7f8c8d; font-size: 1.1rem; }
+
+.services-grid, .team-grid { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
+
+.service-card { background: #ffffff; padding: 40px 30px; border-radius: 10px; width: 320px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.04); border: 1px solid #eaeaea; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.service-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.08); }
+.service-card h3 { color: #2c3e50; margin-bottom: 10px; }
+.service-card p { color: #7f8c8d; font-size: 0.95rem; }
+
+.team-card { background: #ffffff; width: 350px; padding: 40px 30px; border-radius: 10px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.04); border-top: 5px solid #2c3e50; transition: transform 0.3s ease, box-shadow 0.3s ease; display: flex; flex-direction: column; }
+.team-card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+.avatar-placeholder { width: 85px; height: 85px; background-color: #f0f2f5; color: #2c3e50; font-size: 26px; font-weight: 700; display: flex; justify-content: center; align-items: center; border-radius: 50%; margin: 0 auto 20px auto; }
+.team-card h3 { font-size: 1.5rem; color: #2c3e50; margin-bottom: 5px; }
+.team-card .role { font-size: 0.95rem; color: #2980b9; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; }
+.team-card .bio { font-size: 0.95rem; color: #7f8c8d; margin-bottom: 25px; flex-grow: 1; }
+
+.social-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 20px; background-color: #ffffff; color: #333333; text-decoration: none; border: 1px solid #cccccc; border-radius: 30px; font-size: 0.9rem; font-weight: 600; transition: all 0.3s ease; }
+.social-btn:hover { background-color: #f8f9fa; border-color: #999999; color: #000000; }
+.social-btn:hover svg { transform: scale(1.1); transition: transform 0.3s ease; }
+
+footer { text-align: center; padding: 30px; background-color: #1a252f; color: #bdc3c7; font-size: 0.9rem; border-top: 1px solid #2c3e50; }
+
+/* =========================================
+   MOBILE & TABLET RESPONSIVE DESIGN
+   ========================================= */
+@media screen and (max-width: 1024px) {
+    .navbar { padding: 15px 20px; }
+    
+    /* Show Hamburger Menu */
+    .mobile-menu-btn { display: block; }
+
+    /* Hide Desktop Links and Form Mobile Menu */
+    .nav-menu-wrapper { 
+        display: none; 
+        flex-direction: column; 
+        position: absolute; 
+        top: 60px; 
+        left: 0; 
+        width: 100%; 
+        background-color: #ffffff; 
+        padding: 20px; 
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1); 
+        margin-left: 0; 
+        border-top: 1px solid #eee; 
+    }
+
+    /* Activated by JS */
+    .nav-menu-wrapper.active { display: flex; }
+
+    .nav-links { flex-direction: column; align-items: center; gap: 15px; }
+    .nav-actions { flex-direction: column; align-items: center; width: 100%; margin-top: 15px; }
+    .btn-outline { width: 100%; max-width: 250px; }
+
+    /* Fix Content Sizing for Mobile */
+    .hero-content h1 { font-size: 2.2rem; }
+    .hero-content p { font-size: 1rem; padding: 0 10px; }
+    .services-grid, .team-grid { flex-direction: column; align-items: center; }
+    .service-card, .team-card { width: 100%; max-width: 380px; }
+    section { padding: 60px 20px; }
+}

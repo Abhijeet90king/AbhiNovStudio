@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhi Nov Studio | Home</title>
+    <link rel="stylesheet" href="../Files Css/homepage.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-brand">Abhi Nov Studio</div>
+        
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2c3e50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+
+        <div class="nav-menu-wrapper" id="navMenuWrapper">
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#leadership">Leadership</a>
+                <a href="games.html">Games</a>
+                <a href="credits.html">Credits</a>
+                <a href="apply.html">Apply-For-Job</a>
+                <a href="feedback.html">Feedback</a>
+                <a href="project-request.html">Make Your GAME/WEB</a>
+            </div>
+            <div class="nav-actions">
+                <span id="userGreeting">Loading...</span>
+                <button id="logoutBtn" class="btn-outline">Log Out</button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero" id="home">
+        <div class="hero-content fade-on-scroll">
+            <h1>Welcome to AbhiNov Studio</h1>
+            <p>Crafting professional digital experiences with elegance and precision.</p>
+            <a href="#services" class="scroll-btn">Explore Our Work ↓</a>
+        </div>
+    </header>
+
+    <section class="services-section" id="services">
+        <div class="section-header fade-on-scroll">
+            <h2>What We Do</h2>
+            <div class="header-line"></div>
+            <p class="section-subtitle">Delivering industry-leading solutions for modern businesses.</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card fade-on-scroll">
+                <div class="service-icon" style="margin-bottom: 20px;">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#2c3e50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="16 18 22 12 16 6"></polyline>
+                        <polyline points="8 6 2 12 8 18"></polyline>
+                    </svg>
+                </div>
+                <h3>Game Development</h3>
+                <p>Building scalable, responsive, and immersive digital platforms.</p>
+            </div>
+            
+            <div class="service-card fade-on-scroll" style="transition-delay: 0.1s;">
+                <div class="service-icon" style="margin-bottom: 20px;">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#2c3e50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                        <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                    </svg>
+                </div>
+                <h3>UI/UX Design</h3>
+                <p>Creating intuitive and user-centered modern interfaces.</p>
+            </div>
+            
+            <div class="service-card fade-on-scroll" style="transition-delay: 0.2s;">
+                <div class="service-icon" style="margin-bottom: 20px;">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#2c3e50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                    </svg>
+                </div>
+                <h3>Digital Strategy</h3>
+                <p>Helping brands grow with data-driven technical planning.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="leadership-section" id="leadership">
+        <div class="section-header fade-on-scroll">
+            <h2>Meet The Leadership</h2>
+            <div class="header-line"></div>
+        </div>
+
+        <div class="team-grid">
+            <div class="team-card fade-on-scroll">
+                <div class="avatar-placeholder">AR</div>
+                <h3>Abhijeet Ray</h3>
+                <p class="role">Founder & Director</p>
+                <p class="bio">Leading the vision and strategic direction of AbhiNov Studio with a passion for excellence and innovation.</p>
+                <a href="https://www.instagram.com/bhumihar_abhijeetray?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="social-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm3.975-9.658a1.42 1.42 0 11-2.84 0 1.42 1.42 0 012.84 0z"/></svg>
+                    Follow on Instagram
+                </a>
+            </div>
+
+            <div class="team-card fade-on-scroll" style="transition-delay: 0.15s;">
+                <div class="avatar-placeholder">UP</div>
+                <h3>Utsav Pitroda</h3>
+                <p class="role">Co-Founder & Director</p>
+                <p class="bio">Driving operations and creative execution, ensuring every project meets our high professional standards.</p>
+                <a href="https://www.instagram.com/_utsav_pitroda_0303?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="social-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm3.975-9.658a1.42 1.42 0 11-2.84 0 1.42 1.42 0 012.84 0z"/></svg>
+                    Follow on Instagram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 AbhiNov Studio. All rights reserved. <br><br><a href="terms.html" style="color: #bdc3c7; text-decoration: none;">Privacy / Policy</a></p>
+    </footer>
+
+    <script type="module" src="../java/homepage.js"></script>
+</body>
+</html>
