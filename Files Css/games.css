@@ -1,0 +1,96 @@
+/* Reset and Base Styles */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+body { background-color: #f4f6f8; color: #333; line-height: 1.6; padding-top: 70px; }
+
+/* Animations Class */
+.fade-on-scroll { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+.fade-on-scroll.appear { opacity: 1; transform: translateY(0); }
+
+/* =========================================
+   DESKTOP NAVBAR
+   ========================================= */
+.navbar { position: fixed; top: 0; width: 100%; background-color: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); padding: 15px 50px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); z-index: 1000; }
+.nav-brand { font-size: 20px; font-weight: 700; color: #2c3e50; white-space: nowrap; }
+
+/* Hidden on PC */
+.mobile-menu-btn { display: none; background: transparent; border: none; cursor: pointer; }
+
+/* PC Link Layout */
+.nav-menu-wrapper { display: flex; justify-content: space-between; align-items: center; width: 100%; margin-left: 40px; }
+.nav-links { display: flex; gap: 30px; flex-wrap: wrap; }
+.nav-links a { text-decoration: none; color: #555; font-weight: 600; font-size: 14px; transition: color 0.3s; }
+.nav-links a:hover, .nav-links a.active { color: #2980b9; }
+
+.nav-actions { display: flex; align-items: center; gap: 20px; white-space: nowrap; }
+#userGreeting { font-size: 14px; color: #555; font-weight: 500; }
+.btn-outline { padding: 8px 16px; border: 1px solid #2c3e50; background: transparent; color: #2c3e50; border-radius: 4px; cursor: pointer; font-weight: 600; transition: all 0.3s ease; }
+.btn-outline:hover { background: #2c3e50; color: #ffffff; }
+
+/* =========================================
+   GAMES PAGE STYLES
+   ========================================= */
+.page-header { background-color: #1a252f; color: #ffffff; padding: 80px 20px; text-align: center; border-bottom: 4px solid #2980b9; }
+.page-header h1 { font-size: 2.8rem; margin-bottom: 10px; }
+.page-header p { color: #bdc3c7; font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+
+.games-section { padding: 80px 20px; max-width: 1200px; margin: 0 auto; min-height: 60vh; }
+.games-grid { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+
+/* Game Card */
+.game-card { background: #ffffff; width: 350px; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.06); transition: transform 0.3s ease, box-shadow 0.3s ease; display: flex; flex-direction: column; }
+.game-card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(0,0,0,0.12); }
+
+/* Game Banner Placeholder */
+.game-banner { height: 180px; display: flex; justify-content: center; align-items: center; color: rgba(255,255,255,0.2); font-size: 2rem; letter-spacing: 2px; }
+
+.game-info { padding: 30px; display: flex; flex-direction: column; flex-grow: 1; }
+.game-info h3 { font-size: 1.4rem; color: #2c3e50; margin-bottom: 5px; }
+.studio-name { font-size: 0.85rem; color: #2980b9; font-weight: 600; text-transform: uppercase; margin-bottom: 15px; }
+.game-desc { font-size: 0.95rem; color: #555; margin-bottom: 25px; flex-grow: 1; }
+
+/* Download Button */
+.btn-download { display: inline-flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 12px; background-color: #2c3e50; color: #ffffff; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 0.95rem; transition: background-color 0.3s; }
+.btn-download:hover { background-color: #1a252f; }
+
+footer { text-align: center; padding: 30px; background-color: #1a252f; color: #bdc3c7; font-size: 0.9rem; border-top: 1px solid #2c3e50; }
+
+/* =========================================
+   MOBILE & TABLET RESPONSIVE DESIGN
+   ========================================= */
+@media screen and (max-width: 1024px) {
+    .navbar { padding: 15px 20px; }
+    
+    /* Show Hamburger Menu */
+    .mobile-menu-btn { display: block; }
+
+    /* Hide Desktop Links and Form Mobile Menu */
+    .nav-menu-wrapper { 
+        display: none; 
+        flex-direction: column; 
+        position: absolute; 
+        top: 60px; 
+        left: 0; 
+        width: 100%; 
+        background-color: #ffffff; 
+        padding: 20px; 
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1); 
+        margin-left: 0; 
+        border-top: 1px solid #eee; 
+    }
+
+    /* Activated by JS */
+    .nav-menu-wrapper.active { display: flex; }
+
+    .nav-links { flex-direction: column; align-items: center; gap: 15px; }
+    .nav-actions { flex-direction: column; align-items: center; width: 100%; margin-top: 15px; }
+    .btn-outline { width: 100%; max-width: 250px; }
+
+    /* Fix Content Sizing for Mobile */
+    .page-header h1 { font-size: 2.2rem; }
+    .page-header p { font-size: 1rem; padding: 0 10px; }
+    .games-section { padding: 40px 20px; }
+    
+    /* Adjust grid and cards for mobile */
+    .games-grid { flex-direction: column; align-items: center; gap: 30px; }
+    .game-card { width: 100%; max-width: 380px; }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Reports | Abhi Nov Studio</title>
+    <link rel="stylesheet" href="../Files Css/feedback.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-brand">Abhi Nov Studio</div>
+        
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2c3e50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+
+        <div class="nav-menu-wrapper" id="navMenuWrapper">
+            <div class="nav-links">
+                <a href="homepage.html">Home</a>
+                <a href="games.html">Games</a>
+                <a href="credits.html">Credits</a>
+                <a href="apply.html">Apply-For-Job</a>
+                <a href="feedback.html">Feedback</a>
+                <a href="project-request.html">Make Your GAME/WEB</a>
+            </div>
+            <div class="nav-actions">
+                <span id="userGreeting">Loading...</span>
+                <button id="logoutBtn" class="btn-outline">Log Out</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="header-section">
+            <h1>My Feedback Reports</h1>
+            <p>Track the status of the feedback you've submitted.</p>
+        </div>
+
+        <div id="reportList">
+            <div style="text-align: center; color: #888;">Loading your reports...</div>
+        </div>
+    </div>
+
+    <script type="module" src="../java/feedback-report.js"></script>
+</body>
+</html>
